@@ -1,6 +1,5 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { ThemeProvider } from './components/ThemeToggle'
 import ParticleBackground from './components/ParticleBackground'
 import ThemeToggle from './components/ThemeToggle'
 import { Providers } from './providers'
@@ -17,11 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} bg-[#0a192f] dark:bg-[#0a192f] text-white`}>
         <Providers>
-          <ThemeProvider>
-            <ParticleBackground />
-            {children}
-            <ThemeToggle />
-          </ThemeProvider>
+          <ParticleBackground />
+          {children}
+          <ThemeToggle />
         </Providers>
       </body>
     </html>
