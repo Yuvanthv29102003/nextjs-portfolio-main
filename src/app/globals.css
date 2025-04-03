@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 25, 47;
+  --background-end-rgb: 10, 25, 47;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9333ea;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7e22ce;
+}
+
+/* Selection color */
+::selection {
+  background: #9333ea;
+  color: white;
+}
+
+/* Base styles */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+/* Container styles */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Section styles */
+section {
+  @apply py-16 md:py-24;
+}
+
+/* Button styles */
+.btn {
+  @apply px-6 py-3 rounded-full transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-primary-500 text-white hover:bg-primary-600;
+}
+
+.btn-outline {
+  @apply border border-primary-500 text-primary-500 hover:bg-primary-500/10;
+}
+
+/* Card styles */
+.card {
+  @apply bg-[#181818] rounded-xl p-6 transition-all duration-200;
+}
+
+.card-hover {
+  @apply hover:scale-105 hover:shadow-lg hover:shadow-primary-500/20;
+}
+
+/* Animation classes */
+.fade-in {
+  @apply opacity-0 animate-[fadeIn_0.5s_ease-in-out_forwards];
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
