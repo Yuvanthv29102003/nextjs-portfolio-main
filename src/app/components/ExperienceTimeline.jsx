@@ -184,8 +184,11 @@ const ExperienceTimeline = () => {
                   </p>
                   
                   <motion.div
-                    initial={{ height: expandedItem === exp.id ? "auto" : 0, opacity: expandedItem === exp.id ? 1 : 0 }}
-                    animate={{ height: expandedItem === exp.id ? "auto" : 0, opacity: expandedItem === exp.id ? 1 : 0 }}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ 
+                      height: expandedItem === exp.id ? "auto" : 0, 
+                      opacity: expandedItem === exp.id ? 1 : 0 
+                    }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
@@ -260,8 +263,11 @@ const ExperienceTimeline = () => {
                   
                   {edu.skills && (
                     <motion.div
-                      initial={{ height: expandedItem === edu.id ? "auto" : 0, opacity: expandedItem === edu.id ? 1 : 0 }}
-                      animate={{ height: expandedItem === edu.id ? "auto" : 0, opacity: expandedItem === edu.id ? 1 : 0 }}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ 
+                        height: expandedItem === edu.id ? "auto" : 0, 
+                        opacity: expandedItem === edu.id ? 1 : 0 
+                      }}
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useTheme } from "./ThemeToggle";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

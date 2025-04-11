@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { useTheme } from "./ThemeToggle";
+import { useTheme } from "next-themes";
 
 const HeroSection = () => {
   const { theme } = useTheme();
