@@ -60,11 +60,6 @@ const projects = [
 
 const ProjectShowcase = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [activeFilter, setActiveFilter] = useState("all");
-
-  const filteredProjects = activeFilter === "all" 
-    ? projects 
-    : projects.filter(project => project.tag.includes(activeFilter));
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -117,36 +112,17 @@ const ProjectShowcase = () => {
         My Projects
       </motion.h2>
 
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        {["all", "web", "mobile", "other"].map((filter) => (
-          <motion.button
-            key={filter}
-            className={`px-6 py-2 rounded-full ${
-              activeFilter === filter
-                ? "bg-primary-500 text-white"
-                : "bg-[#181818] text-[#ADB7BE] hover:bg-primary-500/20"
-            }`}
-            onClick={() => setActiveFilter(filter)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {filter.charAt(0).toUpperCase() + filter.slice(1)}
-          </motion.button>
-        ))}
-      </div>
-
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         variants={containerVariants}
         initial={null}
         animate="visible"
       >
-        {filteredProjects.map((project) => (
+        {projects.map((project) => (
           <motion.div
             key={project.id}
             className="bg-[#181818] rounded-xl overflow-hidden"
             variants={itemVariants}
-            initial={null}
             whileHover={{ 
               scale: 1.03,
               boxShadow: "0 10px 30px -10px rgba(147, 51, 234, 0.3)",
