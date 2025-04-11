@@ -138,6 +138,7 @@ const ProjectShowcase = () => {
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         variants={containerVariants}
+        initial={null}
         animate="visible"
       >
         {filteredProjects.map((project) => (
@@ -145,6 +146,7 @@ const ProjectShowcase = () => {
             key={project.id}
             className="bg-[#181818] rounded-xl overflow-hidden"
             variants={itemVariants}
+            initial={null}
             whileHover={{ 
               scale: 1.03,
               boxShadow: "0 10px 30px -10px rgba(147, 51, 234, 0.3)",
@@ -188,6 +190,7 @@ const ProjectShowcase = () => {
           <motion.div
             className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
             variants={modalVariants}
+            initial={null}
             animate="visible"
             exit="exit"
             onClick={() => setSelectedProject(null)}
@@ -195,6 +198,7 @@ const ProjectShowcase = () => {
             <motion.div
               className="bg-[#181818] rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               variants={modalContentVariants}
+              initial={null}
               animate="visible"
               exit="exit"
               onClick={(e) => e.stopPropagation()}
