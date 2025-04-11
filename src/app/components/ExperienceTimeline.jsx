@@ -121,7 +121,7 @@ const ExperienceTimeline = () => {
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              aria-pressed={activeTab === "experience"}
+              aria-selected={activeTab === "experience"}
               role="tab"
             >
               Experience
@@ -136,7 +136,7 @@ const ExperienceTimeline = () => {
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              aria-pressed={activeTab === "education"}
+              aria-selected={activeTab === "education"}
               role="tab"
             >
               Education

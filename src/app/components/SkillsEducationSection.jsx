@@ -120,9 +120,8 @@ const SkillsEducationSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Skills Section */}
           <motion.div
-            variants={itemVariants}
-            whileHover="hover"
             variants={cardHoverVariants}
+            whileHover="hover"
             className="bg-[#181818] p-6 rounded-lg"
           >
             <motion.h3 
@@ -150,9 +149,8 @@ const SkillsEducationSection = () => {
 
           {/* Education Section */}
           <motion.div
-            variants={itemVariants}
-            whileHover="hover"
             variants={cardHoverVariants}
+            whileHover="hover"
             className="bg-[#181818] p-6 rounded-lg"
           >
             <motion.h3 
@@ -183,9 +181,8 @@ const SkillsEducationSection = () => {
 
           {/* Experience Section */}
           <motion.div
-            variants={itemVariants}
-            whileHover="hover"
             variants={cardHoverVariants}
+            whileHover="hover"
             className="bg-[#181818] p-6 rounded-lg md:col-span-2"
           >
             <motion.h3 
